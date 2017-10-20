@@ -74,6 +74,7 @@ final class MarkdownlintLinter extends ArcanistExternalLinter {
         $lines = explode("\n", $stdout);
 
         foreach($lines as $line)
+          // Example: file.md:15: MD006 Consider starting bulleted lists at the beginning of the line
           if (preg_match('/^(.*):(\d+):\s(\w{2}\d{3})\s(.*)$/', $line, $matches)) {
               $message = new ArcanistLintMessage();
               $message->setName($matches[3]);
