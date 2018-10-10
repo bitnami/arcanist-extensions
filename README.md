@@ -199,7 +199,7 @@ Below is an example of an `.arclint` file that includes the ESlint Linter:
 
 ### `prettier_linter`
 
-This extension will format your JS code using [Prettier](http://eslint.org). It is important to mention that the extension won't install `prettier`, so you must do it manually. Just make sure you have the `prettier` executable added to the `package.json` of your project and available in the `./node_modules` folder.
+This extension will format your JS code using [Prettier](https://prettier.io/). It is important to mention that the extension won't install `prettier`, so you must do it manually. Just make sure you have the `prettier` executable added to the `package.json` of your project and available in the `./node_modules` folder.
 
 Below is an example of an `.arclint` file that includes the Prettier Linter:
 
