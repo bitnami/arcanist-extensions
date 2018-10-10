@@ -222,6 +222,8 @@ Below is an example of an `.arclint` file that includes the Prettier Linter:
 }
 ```
 
+**Code from**: <https://github.com/pinterest/arcanist-linters>
+
 ### `markdownlint_linter`
 
 This extension will lint your project using [markdownlint](https://github.com/markdownlint/markdownlint). It is important to mention that the extension won't install mdl, so you must do it manually (`gem install mdl`). Just make sure you have the `mdl` executable listed on your `$PATH`.
