@@ -3,6 +3,7 @@ final class ArcanistESLintLinter extends ArcanistExternalLinter {
 
   private $eslintenv;
   private $eslintconfig;
+  private $eslintautofix;
 
   public function getInfoName() {
     return 'ESLint';
@@ -52,6 +53,10 @@ final class ArcanistESLintLinter extends ArcanistExternalLinter {
         'type' => 'optional string',
         'help' => pht('config file to use the default is .eslint.'),
       ),
+      'eslint.autofix' => array(
+        'type' => 'optional string',
+        'help' => pht('runs the command line with --fix to apply autofixable rules.'),
+      ),
     );
     return $options + parent::getLinterConfigurationOptions();
   }
@@ -63,6 +68,9 @@ final class ArcanistESLintLinter extends ArcanistExternalLinter {
       return;
     case 'eslint.eslintconfig':
       $this->eslintconfig = $value;
+      return;
+    case 'eslint.autofix':
+      $this->eslintautofix = $value;
       return;
     }
     return parent::setLinterConfigurationValue($key, $value);
@@ -81,6 +89,11 @@ final class ArcanistESLintLinter extends ArcanistExternalLinter {
     if ($this->eslintconfig) {
       $options[] = '--config='.$this->eslintconfig;
     }
+
+    if ($this->eslintautofix) {
+      $options[] = '--fix';
+    }
+
     $options = array_merge($options, array('--quiet'));
     return $options;
   }
