@@ -731,6 +731,10 @@ Metrics/AbcSize:
                  branches, and conditions.
   Enabled: false
 
+Metrics/BlockLength:
+  Description: 'Avoid blocks longer than 25 lines of code.'
+  Enabled: false
+
 Metrics/BlockNesting:
   Description: 'Avoid excessive block nesting'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count'
@@ -738,7 +742,7 @@ Metrics/BlockNesting:
 
 Metrics/ClassLength:
   Description: 'Avoid classes longer than 100 lines of code.'
-  Enabled: true
+  Enabled: false
 
 Metrics/CyclomaticComplexity:
   Description: >-
