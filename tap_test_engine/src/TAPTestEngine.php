@@ -47,7 +47,7 @@ final class TAPTestEngine extends ArcanistUnitTestEngine {
           break;
 
         default:
-          continue;
+          continue 2;
       }
 
       $results[] = $result;
