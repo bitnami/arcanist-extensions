@@ -63,6 +63,7 @@
     },
     "ruby": {
       "type": "rubocop",
+      "bin": ["bin/rubocop", "rubocop"],
       "include": "/\\.(rb|rake)$/",
       "exclude": "(^db/schema\\.rb)",
       "rubocop.config": ".rubocop.yml"
