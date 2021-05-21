@@ -103,7 +103,10 @@ linters:
 
   PropertySpelling:
     enabled: true
-    extra_properties: []
+    extra_properties:
+      - grid-template-rows
+      - grid-template-columns
+      - grid-gap
 
   QualifyingElement:
     enabled: true
